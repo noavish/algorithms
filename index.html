@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type='text/css' rel='stylesheet' href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Please type in a number">
+    <button type="button">Create a box!</button>
+    <div class="container"></div>
+    <script id='box-template' type='text/x-handlebars-template'>
+        {{#each}}
+            <div class='inner' data-id='{{length}}'></div>
+        {{/each}}
+    </script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</body>
+</html>
+
+
+    
