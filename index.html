@@ -9,15 +9,21 @@
 </head>
 <body>
     <input type="text" placeholder="Please type in a number">
-    <button type="button">Create a box!</button>
-    <div class="container"></div>
+    <button class='create' type="button">Create a box!</button>
+    <button class="sort" type="button">Sort boxes</button>
+    <button class="sort-color" type="button">Sort boxes by colors</button>    
+    <button class="shuffle" type="button">Shuffle boxes</button>
+    
+    <div class="container">
+    </div>
     <script id='box-template' type='text/x-handlebars-template'>
-        {{#each}}
-            <div class='inner' data-id='{{length}}'></div>
+        {{#each box}}
+            <div class='inner' data-id='{{length}}' data-color='{{colorRGB}}' style="height:{{length}}px; width:{{length}}px;background-color:rgb({{color.a}}, {{color.b}}, {{color.c}});"></div>
         {{/each}}
     </script>
-    <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>    
 </body>
 </html>
 
